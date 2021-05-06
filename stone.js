@@ -6,7 +6,7 @@ class stone
 			isStatic:false,
 			restitution:0,
 			friction:1,
-			density:1.2
+			density:0.5
 			}
 		this.x=x;
 		this.y=y;

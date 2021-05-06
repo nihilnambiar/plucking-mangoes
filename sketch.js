@@ -40,7 +40,7 @@ function setup() {
 	treeObj=new tree(1050,580);
 	groundObject=new ground(width/2,600,width,20);
   //create launcherObject here
-
+  launcherObject=new Launcher(stoneObj.body,{x:235,y:420});
 
 	Engine.run(engine);
 }
@@ -70,7 +70,7 @@ function draw() {
   stoneObj.display();
   groundObject.display();
   // display launcher object here
-    launcherObject=new launcher(stoneObj.body,{x:235,y:420});
+   launcherObject.display();
 
 
   detectollision(stoneObj,mango1);
@@ -93,7 +93,9 @@ function mouseDragged(){
 }
 
 //create mouseReleased function here
-gameState = "launched";
+function mouseReleased(){
+  launcherObject.fly()
+}
 
 //create keyPressed function here
 
